@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="india" class="com.collectioninjection.beans.Team">
+        <constructor-arg>
+            <list value-type="java.lang.String">
+                <value>Rohit</value>
+                <value>Kohli</value>
+                <value>Iyer</value>
+                <value>Bumrah</value>
+                <value>Ashwin</value>
+            </list>
+        </constructor-arg>
+        <property name="coachSet">
+            <set value-type="java.lang.String">
+                <value>Shastri</value>
+                <value>Moody</value>
+                <value>Gary</value>
+                <value>Jeff</value>
+            </set>
+        </property>
+        <property name="playersJersey">
+            <map key-type="java.lang.String" value-type="java.lang.Integer">
+                <entry key="Rohit" value="10"/>
+                <entry key="Kohli" value="18"/>
+                <entry key="Iyer" value="29"/>
+                <entry key="Bumrah" value="47"/>
+                <entry key="Ashwin" value="9"/>
+            </map>
+        </property>
+        <property name="playerSkills">
+            <props>
+                <prop key="Rohit">Batsman</prop>
+                <prop key="Kohli">Batsman</prop>
+                <prop key="Iyer">Batsman</prop>
+                <prop key="Bumrah">Bowler</prop>
+                <prop key="Ashwin">Bowler</prop>
+            </props>
+        </property>
+        <property name="teamName" value="India"/>
+    </bean>
+</beans>
